@@ -8,7 +8,6 @@ export default function App() {
     return (
       <div className="App">
           <PostGrid />
-          <p>Hello</p>
       </div>
     );
 }
