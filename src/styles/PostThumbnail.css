@@ -5,3 +5,8 @@
 
     text-align: center;
 }
+
+.post-box:hover {
+    transition: transform .2s; /* Animation */
+    transform: scale(1.05);
+}
