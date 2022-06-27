@@ -2,7 +2,6 @@
     .grid {
         display: grid;
         justify-content: center;
-        background-color: red;
     }
 }
 
@@ -11,7 +10,6 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
-        background-color: brown;
     }
 }
 
@@ -20,6 +18,5 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-content: center;
-        background-color: aqua;
     }
 }
