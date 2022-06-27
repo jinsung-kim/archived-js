@@ -10,3 +10,7 @@
     transition: transform .2s; /* Animation */
     transform: scale(1.02);
 }
+
+.post-title {
+    color: white;
+}

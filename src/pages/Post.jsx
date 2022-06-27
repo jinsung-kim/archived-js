@@ -1,20 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
+import { useParams } from "react-router-dom";
 
-export default class Post extends Component {
+import Navbar from "../components/Navbar";
 
-    constructor(props) {
-        super(props);
+export default function Post() {
 
-        this.state = {
+    const { id } = useParams();
 
-        };
-    }
-
-    render() {
-        return (
+    return (
             <div className="post-container">
-                <p>This is a post</p>
+                <Navbar />
+                <p>This is a post with the id: { id }</p>
             </div>
         );
-    }
 }

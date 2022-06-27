@@ -9,21 +9,22 @@ export default class PostGrid extends Component {
         super(props);
 
         this.state = {
-            posts: [],
+            posts: [
+                {id: 1, title: "Virgil Abloh 2022 SS", url: "https://swaggerareus.com/wp-content/uploads/2021/06/virgil-abloh-louis-vuitton-spring-summer-2022-23.jpeg"},
+                {id: 2, title: "Virgil Abloh 2021 AW", url: "https://swaggerareus.com/wp-content/uploads/2021/06/virgil-abloh-louis-vuitton-spring-summer-2022-23.jpeg"},
+                {id: 3, title: "Virgil Abloh 2021 SS", url: "https://swaggerareus.com/wp-content/uploads/2021/06/virgil-abloh-louis-vuitton-spring-summer-2022-23.jpeg"}
+            ],
         }
     }
 
     render() {
         return (
             <div className="grid">
-                <PostThumbnail 
-                    title={"Virgil's SS 2022 Show"} url={ "https://swaggerareus.com/wp-content/uploads/2021/06/virgil-abloh-louis-vuitton-spring-summer-2022-23.jpeg" }/>
-
-                <PostThumbnail
-                    title={"Virgil's SS 2021 Show"} url={ "https://swaggerareus.com/wp-content/uploads/2021/06/virgil-abloh-louis-vuitton-spring-summer-2022-23.jpeg" }/>
-
-                <PostThumbnail
-                    title={"Virgil's SS 2020 Show"} url={ "https://swaggerareus.com/wp-content/uploads/2021/06/virgil-abloh-louis-vuitton-spring-summer-2022-23.jpeg" }/>
+                {this.state.posts.map(({ id, title, url }) => (
+                    <li key={ id }>
+                        <PostThumbnail id={ id } title={ title } url={ url }/>
+                    </li>
+                ))}
             </div>
         );
     }

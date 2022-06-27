@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "../styles/PostThumbnail.css";
 
+import { Link } from "react-router-dom";
+
 export default class PostThumbnail extends Component {
 
     constructor(props) {
@@ -10,7 +12,8 @@ export default class PostThumbnail extends Component {
             title: props.title,
             thumbnail: props.url,
             width: window.innerWidth,
-            maxHeight: window.innerHeight
+            maxHeight: window.innerHeight,
+            id: props.id
         };
     }
 
@@ -42,12 +45,14 @@ export default class PostThumbnail extends Component {
 
     render() {
         return (
-            <div className="post-box">
-                <img src={ this.state.thumbnail } alt="" 
-                style={{ width: this.imageSize() }}
-                />
-                <h3>{ this.state.title }</h3>
-            </div>
+            <Link to={`post/${this.state.id}`}>
+                <div className="post-box">
+                    <img src={ this.state.thumbnail } alt="" 
+                    style={{ width: this.imageSize() }}
+                    />
+                    <h3 className="post-title">{ this.state.title }</h3>
+                </div>
+            </Link>
         );
     }
 }

@@ -21,7 +21,7 @@ export default class App extends Component {
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="post/*" element={<Post />} />
+                        <Route path="/post/:id" element={<Post />} />
                         <Route path="/about" element={ <About />} />
                     </Routes>
                 </BrowserRouter>
