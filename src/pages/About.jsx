@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-
 import Navbar from "../components/Navbar";
+
+import "../styles/About.css";
 
 export default class About extends Component {
 

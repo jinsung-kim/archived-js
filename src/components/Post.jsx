@@ -36,7 +36,7 @@ function formatter(post) {
         } else if (section["mode"] === "youtube") {
             res.push(
                 <div className="youtube-link">
-                    <iframe width="560" height="315" 
+                    <iframe max-width="560" width="80%" height="315"
                     src={section["content"]} 
                     title="YouTube video player" frameBorder="0" 
                     allowFullScreen></iframe>
