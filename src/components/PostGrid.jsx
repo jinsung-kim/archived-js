@@ -10,9 +10,9 @@ export default class PostGrid extends Component {
 
         this.state = {
             posts: [
-                {id: 1, title: "Virgil Abloh 2022 SS", url: "https://swaggerareus.com/wp-content/uploads/2021/06/virgil-abloh-louis-vuitton-spring-summer-2022-23.jpeg"},
-                {id: 2, title: "Virgil Abloh 2021 AW", url: "https://swaggerareus.com/wp-content/uploads/2021/06/virgil-abloh-louis-vuitton-spring-summer-2022-23.jpeg"},
-                {id: 3, title: "Virgil Abloh 2021 SS", url: "https://swaggerareus.com/wp-content/uploads/2021/06/virgil-abloh-louis-vuitton-spring-summer-2022-23.jpeg"}
+                {id: "virgils-impact", title: "Virgil Abloh 2022 SS", url: "https://swaggerareus.com/wp-content/uploads/2021/06/virgil-abloh-louis-vuitton-spring-summer-2022-23.jpeg"},
+                {id: "virgils-impact", title: "Virgil Abloh 2021 AW", url: "https://swaggerareus.com/wp-content/uploads/2021/06/virgil-abloh-louis-vuitton-spring-summer-2022-23.jpeg"},
+                {id: "virgils-impact", title: "Virgil Abloh 2021 SS", url: "https://swaggerareus.com/wp-content/uploads/2021/06/virgil-abloh-louis-vuitton-spring-summer-2022-23.jpeg"}
             ],
         }
     }
