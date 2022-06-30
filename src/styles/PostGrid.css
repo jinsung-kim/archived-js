@@ -21,6 +21,10 @@
     }
 }
 
+.grid {
+    padding-top: 3px;
+}
+
 .grid li {
     list-style: none;
 }

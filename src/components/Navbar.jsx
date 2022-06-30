@@ -8,13 +8,13 @@ export default class Navbar extends Component {
     render() {
         return (
             <div className="navbar-container">
-                <Link to="../">
+                <Link to="../" style={{ textDecoration: 'none' }}>
                     <p className="nav-item">Home</p>
                 </Link>
                 {/* <Link to="../forsale">
                     <p className="nav-item">Selling</p>
                 </Link> */}
-                <Link to="../about">
+                <Link to="../about" style={{ textDecoration: 'none' }}>
                     <p className="nav-item">About</p>
                 </Link>
             </div>

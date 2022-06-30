@@ -45,7 +45,7 @@ export default class PostThumbnail extends Component {
 
     render() {
         return (
-            <Link to={`post/${this.state.id}`}>
+            <Link to={`post/${this.state.id}`} style={{ textDecoration: 'none' }}>
                 <div className="post-box">
                     <img src={ this.state.thumbnail } alt="---" 
                     style={{ width: this.imageSize() }}

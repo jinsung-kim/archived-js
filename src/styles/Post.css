@@ -13,7 +13,6 @@
 .post-container {
     margin-right: auto; 
     margin-left: auto;
-    padding-top: 3px;
 }
 
 /* Aligns at the center */
@@ -25,6 +24,7 @@
 .text-bolded {
     font-weight: bold;
     font-size: 1.2rem;
+    color: antiquewhite;
 }
 
 .text, .quote {
@@ -34,6 +34,7 @@
 
 .caption {
     font-style: italic;
+    color: antiquewhite;
 }
 
 .quote {
@@ -45,4 +46,5 @@
 .title-text {
     font-weight: bold;
     font-size: 2rem;
+    color: antiquewhite;
 }
