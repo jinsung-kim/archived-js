@@ -10,8 +10,16 @@ export default class About extends Component {
 
         // For effect on hover
         this.state = {
-
+            hovering: false
         };
+    }
+
+    onHover = (e) => {
+        e.preventDefault();
+
+        this.setState({
+            hovering: !this.state.hovering
+        });
     }
 
     render() {
@@ -20,11 +28,13 @@ export default class About extends Component {
                 <Navbar />
                 
                 <div className="text-box">
-                    <p className="title">archived.js</p>
+                    {/* <div className="reactive" onMouseOver={ this.onHover }> */}
+                        <p className="title">archived.js</p>
+                    {/* </div> */}
                     <p className="sub">
                         archived.js is a creative project that I have envisioned with the intent to document my thinking process and
                         interaction with art. "archived" in this case refers to my vast collection of writing.
-                        The "js" in the second part refers to the initials of my name (진성 or Jin Sung) while also referencing the framework 
+                        The "js" in the second part refers to the initials of my first name (진성 or Jin Sung) while also referencing the framework 
                         this entire project (frontend and backend) was created in.
                         You can see how it was designed and created <a href="https://github.com/jinsung-kim/archived-js">here</a>. 
                         

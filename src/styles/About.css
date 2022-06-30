@@ -25,6 +25,10 @@
     color: antiquewhite;
 }
 
+.title-hover {
+    color: firebrick;
+}
+
 .sub a {
     text-decoration: none;
     color: antiquewhite;
