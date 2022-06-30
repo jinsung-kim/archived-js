@@ -32,8 +32,17 @@
     line-height: 1.5;
 }
 
+.caption {
+    font-style: italic;
+}
+
 .quote {
     padding-left: 15px;
     border-left: 2px solid white;
     font-style: italic;
+}
+
+.title-text {
+    font-weight: bold;
+    font-size: 2rem;
 }
