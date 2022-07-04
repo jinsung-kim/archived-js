@@ -32,7 +32,7 @@ export default class About extends Component {
                         <p className="title">archived.js</p>
                     {/* </div> */}
                     <p className="sub">
-                        archived.js is a creative project that I have envisioned with the intent to document my thinking process and
+                        archived.js is a creative writing project that I have envisioned with the intent to document my thinking process and
                         interaction with art. "archived" in this case refers to my vast collection of writing.
                         The "js" in the second part refers to the initials of my first name (진성 or Jin Sung) while also referencing the framework 
                         this entire project (frontend and backend) was created in.
@@ -41,16 +41,26 @@ export default class About extends Component {
                         <br></br>
                         <br></br>
 
-                        <i>Why does it need to exist?</i> This is the first question I always think of after I initiate a project.
+                        <i>Why does it need to exist?</i> This is the first question I always think of when I bring something to light.
                         I have a page dedicated to writing about books that I have read <a href="https://jinkim.io/blog">here</a> - but I 
-                        found it rather one dimensional, and have been wanting to expand into other realms of interests that I have. I hope to
-                        create clothes one day - and this page will serve as a great reference point if that day ever comes.
+                        found it rather one dimensional, and have been wanting to expand into other realms of interests that I have. I also 
+                        go through many cycles of thoughts - but find myself often too distracted to dig deeper.
+                        With this project, I hope to be able to deliver more thought provoking ideas with clear cut examples so that I can reference 
+                        them in my future works, and see my progression as a thinker.
 
                         <br></br>
                         <br></br>
 
-                        <i>The overarching goal of this is to leave my digital footprint behind - 
-                            and to articulate my ideas in a way that exists forever.</i>
+                        I am interested in many old fashion houses and more so the creatives that led them to great success. I am deeply
+                        interested in exploring the likes of Martin Margiela, Alexander McQueen, Demna Gvasalia, and Rei Kawakubo, and the underlying
+                        principles that guide their work to where it is. I wish to look further into how they set their place in history while redefining
+                        everything else to come. I intend to focus on the storytelling elements of collections, 
+                        the artfulness of which garments are presented, and the unique cuts of clothes.
+
+                        <br></br>
+                        <br></br>
+
+                        <i>I am enamored with the creating process and leaving my digital footprint in a way that exists forever.</i>
                     </p>
 
                     <p className="title">contact</p>
