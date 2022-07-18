@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Post from "../components/Post";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 // import ErrorMessage from "../components/ErrorMessage";
 
 import { useParams } from "react-router-dom";
@@ -33,6 +34,7 @@ export default function PostPage() {
         <div>
             <Navbar />
             <Post content={content}/>
+            <Footer />
         </div>
     );
 }

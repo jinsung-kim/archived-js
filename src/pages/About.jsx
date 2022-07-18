@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 import "../styles/About.css";
 
@@ -35,7 +36,7 @@ export default class About extends Component {
                         archived.js is a creative writing project that I have envisioned with the intent to document my thinking process and
                         interaction with art. "archived" in this case refers to my vast collection of writing.
                         The "js" in the second part refers to the initials of my first name (진성 or Jin Sung) while also referencing the framework 
-                        this entire project (frontend and backend) was created in.
+                        this entire project (frontend and backend) was created in (Javascript).
                         You can see how it was designed and created <a href="https://github.com/jinsung-kim/archived-js">here</a>. 
                         
                         <br></br>
@@ -46,7 +47,7 @@ export default class About extends Component {
                         found it rather one dimensional, and have been wanting to expand into other realms of interests that I have. I also 
                         go through many cycles of thoughts - but find myself often too distracted to dig deeper.
                         With this project, I hope to be able to deliver more thought provoking ideas with clear cut examples so that I can reference 
-                        them in my future works, and see my progression as a thinker.
+                        them in my future works, and see my progression as a writer.
 
                         <br></br>
                         <br></br>
@@ -60,7 +61,7 @@ export default class About extends Component {
                         <br></br>
                         <br></br>
 
-                        <i>I am enamored with the creating process and leaving my digital footprint in a way that exists forever.</i>
+                        <i>I am enamored with the creative process and leaving my digital footprint in a way that exists forever.</i>
                     </p>
 
                     <p className="title">contact</p>
@@ -68,6 +69,8 @@ export default class About extends Component {
                         <li>email: jinsungkim1210@gmail.com</li>
                         <li>Instagram: codejin_</li>
                     </ul>
+
+                    <Footer />
                 </div>
 
                 {/* <img src="https://i.pinimg.com/originals/c5/16/d4/c516d4c3492422666be07065ab28e98d.png" alt="Martin Margiela" height="300" /> */}
