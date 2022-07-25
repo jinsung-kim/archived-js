@@ -36,9 +36,9 @@ export default class PostThumbnail extends Component {
         if (this.state.width < 600) {
             resWidth = this.state.width / 1.25;
         } else if (this.state.width < 1000) {
-            resWidth = this.state.width / 3;
-        } else {
             resWidth = this.state.width / 4;
+        } else {
+            resWidth = this.state.width / 5;
         }
         return resWidth;
     }
@@ -50,7 +50,7 @@ export default class PostThumbnail extends Component {
                     <img src={ this.state.thumbnail } alt="---" 
                     style={{ width: this.imageSize(), height: this.imageSize() * 1.3, objectFit: "cover" }}
                     />
-                    <h3 className="post-title">{ this.state.title }</h3>
+                    <h4 className="post-title" style={{ width: this.imageSize() }}>{ this.state.title }</h4>
                 </div>
             </Link>
         );

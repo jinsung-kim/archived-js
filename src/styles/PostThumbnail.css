@@ -2,7 +2,6 @@
     padding-top: 30px;
     padding-left: 15px;
     padding-right: 15px;
-
     text-align: center;
 }
 
@@ -13,4 +12,8 @@
 
 .post-title {
     color: white;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
