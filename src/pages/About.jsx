@@ -53,15 +53,15 @@ export default class About extends Component {
                         <br></br>
 
                         I am interested in many old fashion houses and more so the creatives that led them to great success. I am deeply
-                        interested in exploring the likes of Martin Margiela, Alexander McQueen, Demna Gvasalia, and Rei Kawakubo, and the underlying
+                        interested in exploring the likes of Martin Margiela and the underlying
                         principles that guide their work to where it is. I wish to look further into how they set their place in history while redefining
                         everything else to come. I intend to focus on the storytelling elements of collections, 
-                        the artfulness of which garments are presented, and the unique cuts of clothes.
+                        the artfulness of which garments are presented, and the unique cuts of clothes alongside the culture impact that fashion has.
 
                         <br></br>
                         <br></br>
 
-                        <i>I am enamored with the creative process and leaving my digital footprint in a way that exists forever.</i>
+                        <i>I believe that anything I don't write down will eventually be forgotten. In a way, this is my will to leave something behind.</i>
                     </p>
 
                     <p className="title">contact</p>
