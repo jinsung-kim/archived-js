@@ -15,7 +15,7 @@ export default class PostGrid extends Component {
 
     componentDidMount() {
         const that = this;
-        fetch("https://www.jinkim.io/posts")
+        fetch("https://us-central1-jinkim-backend.cloudfunctions.net/app/posts")
         .then((res) => res.json())
         .then(function(postsloaded) {
             return postsloaded;

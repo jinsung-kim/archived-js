@@ -15,7 +15,7 @@ export default function PostPage() {
 
     // Fetch from API
     useEffect(() => {
-        fetch("https://www.jinkim.io/post?id=" + id)
+        fetch("https://us-central1-jinkim-backend.cloudfunctions.net/app/post?id=" + id)
         .then((res) => res.json())
         .then(function(postResults) {
             updateContent(postResults["post_info"]);

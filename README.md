@@ -9,3 +9,17 @@ Install react and packages within package.json file. Then simply run:
 ```shell
 npm start
 ```
+
+## Deploying to Firebase
+
+- With the use of React, the changes must be built first.
+
+```shell
+npm run build
+```
+
+- Login to Firebase (if this has not been done already).
+
+```shell
+firebase init && firebase deploy
+```
