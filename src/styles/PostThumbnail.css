@@ -1,19 +1,19 @@
 .post-box {
-    padding-top: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
 }
 
 .post-box:hover {
-    transition: transform .2s; /* Animation */
-    transform: scale(1.02);
+  transition: transform 0.2s; /* Animation */
+  transform: scale(1.02);
 }
 
 .post-title {
-    color: white;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+  color: white;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }

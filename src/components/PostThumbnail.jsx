@@ -1,58 +1,64 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/PostThumbnail.css";
 
 import { Link } from "react-router-dom";
 
-export default class PostThumbnail extends Component {
+function getWindowDimensions() {
+  const { innerWidth: width } = window;
+  return {
+    width,
+  };
+}
 
-    constructor(props) {
-        super(props);
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
 
-        this.state = {
-            title: props.title,
-            thumbnail: props.url,
-            width: window.innerWidth,
-            maxHeight: window.innerHeight,
-            id: props.id
-        };
-    }
-
-    // Window resizing methods
-    handleResize = (e) => {
-        this.setState({ width: window.innerWidth });
-    }
-      
-    componentDidMount = () => {
-        window.addEventListener("resize", this.handleResize);
-    }
-    
-    componentWillUnmount = () => {
-        window.addEventListener("resize", this.handleResize);
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
     }
 
-    // Determines how to size the images
-    imageSize = () =>  {
-        var resWidth = 0;
-        if (this.state.width < 600) {
-            resWidth = this.state.width / 1.25;
-        } else if (this.state.width < 1000) {
-            resWidth = this.state.width / 4;
-        } else {
-            resWidth = this.state.width / 5;
-        }
-        return resWidth;
-    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-    render() {
-        return (
-            <Link to={`post/${this.state.id}`} style={{ textDecoration: 'none' }}>
-                <div className="post-box">
-                    <img src={ this.state.thumbnail } alt="---" 
-                    style={{ width: this.imageSize(), height: this.imageSize() * 1.3, objectFit: "cover" }}
-                    />
-                    <h4 className="post-title" style={{ width: this.imageSize() }}>{ this.state.title }</h4>
-                </div>
-            </Link>
-        );
+  return windowDimensions;
+}
+
+export default function PostThumbnail({ title, url, id }) {
+  const { width } = useWindowDimensions();
+
+  // Determines how to size the images
+  const imageSize = () => {
+    var resWidth = 0;
+    if (width < 600) {
+      resWidth = width / 1.25;
+    } else if (width < 1000) {
+      resWidth = width / 4;
+    } else {
+      resWidth = width / 5;
     }
+    return resWidth;
+  };
+
+  return (
+    <Link to={`post/${id}`} style={{ textDecoration: "none" }}>
+      <div className='post-box'>
+        <img
+          src={url}
+          alt='---'
+          style={{
+            width: imageSize(),
+            height: imageSize() * 1.3,
+            objectFit: "cover",
+          }}
+        />
+        <h4 className='post-title' style={{ width: imageSize() }}>
+          {title}
+        </h4>
+      </div>
+    </Link>
+  );
 }

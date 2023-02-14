@@ -1,47 +1,36 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import PostThumbnail from "./PostThumbnail";
 
 import "../styles/PostGrid.css";
 
-export default class PostGrid extends Component {
-    
-    constructor(props) {
-        super(props);
+export default function PostGrid() {
+  const [posts, setPosts] = useState([]);
 
-        this.state = {
-            posts: [],
+  useEffect(() => {
+    fetch("https://us-central1-jinkim-backend.cloudfunctions.net/app/posts")
+      .then((res) => res.json())
+      .then(function(postsLoaded) {
+        return postsLoaded;
+      })
+      .then(function(res) {
+        // Create component
+        const thumbnails = [];
+        for (var i = 0; i < res.length; i += 1) {
+          const curr = res[i];
+          thumbnails.push(
+            <li key={curr["id"] + i}>
+              <PostThumbnail
+                id={curr["id"]}
+                title={curr["title"]}
+                url={curr["thumbnail"]}
+              />
+            </li>
+          );
         }
-    }
 
-    componentDidMount() {
-        const that = this;
-        fetch("https://us-central1-jinkim-backend.cloudfunctions.net/app/posts")
-        .then((res) => res.json())
-        .then(function(postsloaded) {
-            return postsloaded;
-        })
-        .then(function(res) {
+        setPosts(thumbnails);
+      });
+  }, []);
 
-            // Create component
-            var thumbnails = [];
-            for (var i = 0; i < res.length; i += 1) {
-                var curr = res[i];
-                thumbnails.push(<li key={ curr["id"] + i }>
-                    <PostThumbnail id={ curr["id"] } title={ curr["title"] } url={ curr["thumbnail"] }/>
-                </li>);
-            }
-
-            that.setState({
-                posts: thumbnails
-            });
-        });
-    }
-
-    render() {
-        return (
-            <div className="grid">
-                { this.state.posts }
-            </div>
-        );
-    }
+  return <div className='grid'>{posts}</div>;
 }

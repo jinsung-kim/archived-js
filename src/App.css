@@ -1,6 +1,9 @@
-html, body, body > div, .app-container {
+html,
+body,
+body > div,
+.app-container {
   height: 100vh;
   background-color: #111111;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Helvetica;
 }

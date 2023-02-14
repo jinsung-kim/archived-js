@@ -1,30 +1,30 @@
 @media only screen and (min-width: 100px) {
-    .grid {
-        display: grid;
-        justify-content: center;
-    }
+  .grid {
+    display: grid;
+    justify-content: center;
+  }
 }
 
 @media only screen and (min-width: 600px) {
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-    }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
-    }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+  }
 }
 
 .grid {
-    padding-top: 3px;
+  padding-top: 3px;
 }
 
 .grid li {
-    list-style: none;
+  list-style: none;
 }
