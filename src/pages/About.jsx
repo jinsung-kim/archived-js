@@ -33,17 +33,12 @@ export default function About() {
           of thoughts - but find myself often too distracted to dig deeper
           without forcing myself to sit and write.
           <br></br>
-          <br></br>I treat my brain like a map from a video game. While it
-          begins in a foggy grey mess, it slowly tunes itself to clarity as I
-          expose myself to new things. If my thinking process, cognitive
-          heuristics, and ideas have not changed every couple years, it
-          signifies my lack of growth and exposure.
-          <br></br>
           <br></br>
           <i>
             I consider it a goal of mine to continue this project and to be able
             to look back and see my interests through the years. I believe that
-            anything I don't write down will eventually be forgotten.
+            anything I don't write down or document will eventually be
+            forgotten.
           </i>
         </p>
 
@@ -57,6 +52,19 @@ export default function About() {
           </li>
           <li>
             Instagram: <i>codejin_</i>
+          </li>
+          <li>
+            Main website:{' '}
+            <i>
+              <a
+                href="https://jinkim.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none', color: 'red' }}
+              >
+                jinkim.io
+              </a>
+            </i>
           </li>
         </ul>
 
