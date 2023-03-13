@@ -33,11 +33,11 @@ export default function About() {
           of thoughts - but find myself often too distracted to dig deeper
           without forcing myself to sit and write.
           <br></br>
-          <br></br>I treat my brain like a map from a video game. It begins in a
-          foggy grey mess, and slowly tunes itself to clarity as I expose myself
-          to new things. If my thinking process, cognitive heuristics, and ideas
-          have not changed every couple years, it reflects poorly on how I spent
-          my time.
+          <br></br>I treat my brain like a map from a video game. While it
+          begins in a foggy grey mess, it slowly tunes itself to clarity as I
+          expose myself to new things. If my thinking process, cognitive
+          heuristics, and ideas have not changed every couple years, it
+          signifies my lack of growth and exposure.
           <br></br>
           <br></br>
           <i>
