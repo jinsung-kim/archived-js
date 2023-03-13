@@ -15,6 +15,10 @@
   margin-left: auto;
 }
 
+.date-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Aligns at the center */
 .youtube-link,
 .image-link {
@@ -30,7 +34,7 @@
 
 .text,
 .quote {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 
@@ -49,4 +53,5 @@
   font-weight: bold;
   font-size: 2rem;
   color: antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
 }

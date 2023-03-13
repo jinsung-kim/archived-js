@@ -7,10 +7,10 @@ export default function Navbar() {
   return (
     <div className='navbar-container'>
       <Link to='../' style={{ textDecoration: "none" }}>
-        <p className='nav-item'>Home</p>
+        <p className='nav-item'>HOME</p>
       </Link>
       <Link to='../about' style={{ textDecoration: "none" }}>
-        <p className='nav-item'>About</p>
+        <p className='nav-item'>ABOUT</p>
       </Link>
     </div>
   );

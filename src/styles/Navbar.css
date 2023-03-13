@@ -8,9 +8,10 @@
 .navbar-container p {
   padding-right: 10px;
   padding-left: 10px;
-  padding-top: 10px;
+  padding-top: 15px;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar-container p:hover {

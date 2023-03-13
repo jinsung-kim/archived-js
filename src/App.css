@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "TimesNowBold";
+  font-style: bold;
+  src: url("./styles/fonts/Times-Now-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "TimesNowLight";
+  font-style: light;
+  src: url("./styles/fonts/Times-Now-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "TimesNowLightItalics";
+  font-style: light;
+  src: url("./styles/fonts/Times-Now-Light-Italic.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "TimesNowSemiBold";
+  font-style: normal;
+  src: url("./styles/fonts/Times-Now-SemiBold.otf") format("truetype");
+}
+
 html,
 body,
 body > div,
@@ -5,5 +29,5 @@ body > div,
   height: 100vh;
   background-color: #111111;
   color: #ffffff;
-  font-family: Helvetica;
+  font-family: "TimesNowSemiBold";
 }
