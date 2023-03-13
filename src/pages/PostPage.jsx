@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import Post from "../components/Post";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import React, { useState, useEffect } from 'react';
+import Post from '../components/Post';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
 export default function PostPage() {
   const { id } = useParams();
@@ -12,11 +12,11 @@ export default function PostPage() {
   // Fetch from API
   useEffect(() => {
     fetch(
-      "https://us-central1-jinkim-backend.cloudfunctions.net/app/post?id=" + id
+      'https://us-central1-jinkim-backend.cloudfunctions.net/app/post?id=' + id,
     )
-      .then((res) => res.json())
+      .then(res => res.json())
       .then(function(postResults) {
-        updateContent(postResults["post_info"]);
+        updateContent(postResults['post_info']);
       });
   }, []);
 

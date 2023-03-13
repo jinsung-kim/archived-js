@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import PostThumbnail from "./PostThumbnail";
+import React, { useState, useEffect } from 'react';
+import PostThumbnail from './PostThumbnail';
 
-import "../styles/PostGrid.css";
+import '../styles/PostGrid.css';
 
 export default function PostGrid() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("https://us-central1-jinkim-backend.cloudfunctions.net/app/posts")
-      .then((res) => res.json())
+    fetch('https://us-central1-jinkim-backend.cloudfunctions.net/app/posts')
+      .then(res => res.json())
       .then(function(postsLoaded) {
         return postsLoaded;
       })
@@ -18,13 +18,13 @@ export default function PostGrid() {
         for (var i = 0; i < res.length; i += 1) {
           const curr = res[i];
           thumbnails.push(
-            <li key={curr["id"] + i}>
+            <li key={curr['id'] + i}>
               <PostThumbnail
-                id={curr["id"]}
-                title={curr["title"]}
-                url={curr["thumbnail"]}
+                id={curr['id']}
+                title={curr['title']}
+                url={curr['thumbnail']}
               />
-            </li>
+            </li>,
           );
         }
 
@@ -32,5 +32,9 @@ export default function PostGrid() {
       });
   }, []);
 
-  return <div className='grid'>{posts}</div>;
+  return (
+    <div className="grid">
+      {posts.length === 0 ? <p className="loading-text">Loading...</p> : posts}
+    </div>
+  );
 }

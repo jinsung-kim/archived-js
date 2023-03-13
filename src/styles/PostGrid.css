@@ -28,3 +28,7 @@
 .grid li {
   list-style: none;
 }
+
+.loading-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
