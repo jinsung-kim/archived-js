@@ -57,7 +57,7 @@ export default function Capsules() {
           <img
             style={{
               width: width / 1.25,
-              maxWidth: 200,
+              maxWidth: 250,
               margin: 'auto',
               display: 'block',
             }}
