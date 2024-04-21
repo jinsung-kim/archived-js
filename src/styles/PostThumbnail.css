@@ -2,6 +2,13 @@
   padding-top: 5px;
 }
 
+@media only screen and (max-width: 600px) {
+  .post-box {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
 .post-box:hover {
   transition: transform 0.2s; /* Animation */
   transform: scale(1.01);
