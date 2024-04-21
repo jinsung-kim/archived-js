@@ -9,9 +9,9 @@ export default function Navbar() {
       <Link to="../" style={{ textDecoration: 'none' }}>
         <p className="nav-item">THOUGHTS</p>
       </Link>
-      <Link to="../capsules" style={{ textDecoration: 'none' }}>
+      {/* <Link to="../capsules" style={{ textDecoration: 'none' }}>
         <p className="nav-item">CAPSULES</p>
-      </Link>
+      </Link> */}
       <Link to="../about" style={{ textDecoration: 'none' }}>
         <p className="nav-item">ABOUT</p>
       </Link>

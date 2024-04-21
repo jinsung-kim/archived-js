@@ -1,70 +1,7 @@
 import React from 'react';
-import { useWindowDimensions } from '../helpers/ScreenSize';
+import { formatMd } from '../helpers/formatter';
 
 import '../styles/Post.css';
-
-// Helper to format the data
-function formatter(post) {
-  var res = [];
-  if (post === undefined || post === null) {
-    return res;
-  }
-  const { width } = useWindowDimensions();
-
-  post.forEach(section => {
-    if (section['mode'] === 'text') {
-      res.push(
-        <p className="text" key={section['content']}>
-          {section['content']}
-        </p>,
-      );
-    } else if (section['mode'] === 'quote') {
-      res.push(
-        <p className="quote" key={section['content']}>
-          {section['content']}
-        </p>,
-      );
-    } else if (section['mode'] === 'bold') {
-      res.push(
-        <p className="text-bolded" key={section['content']}>
-          {section['content']}
-        </p>,
-      );
-    } else if (section['mode'] === 'image') {
-      if (width > 500) {
-        res.push(
-          <div className="image-link" key={section['content']}>
-            <img src={section['content']} width="400px" alt="---" />
-            <p className="caption">{section['caption']}</p>
-          </div>,
-        );
-      } else {
-        res.push(
-          <div className="image-link" key={section['content']}>
-            <img src={section['content']} width="70%" alt="---" />
-            <p className="caption">{section['caption']}</p>
-          </div>,
-        );
-      }
-    } else if (section['mode'] === 'youtube') {
-      res.push(
-        <div className="youtube-link" key={section['content']}>
-          <iframe
-            max-width="560px"
-            width="80%"
-            height="500"
-            src={section['content']}
-            title="YouTube video player"
-            allowFullScreen
-          ></iframe>
-          <p className="caption">{section['caption']}</p>
-        </div>,
-      );
-    }
-  });
-
-  return res;
-}
 
 export default function Post(props) {
   if (props.content !== undefined) {
@@ -73,17 +10,14 @@ export default function Post(props) {
         <div className="header">
           <h3 className="title-text">{props.content[0]['title']}</h3>
           <p className="date-text">Created on: {props.content[0]['date']}</p>
-          {/* <div className="tags-container">
-                        { props.content[0]["tags"] }
-                    </div> */}
         </div>
-        {formatter(props.content)}
+        {formatMd(props.content)}
       </div>
     );
   } else {
     return (
       <div className="post-container">
-        <p>Loading...</p>
+        <p className="loading">Loading...</p>
       </div>
     );
   }
