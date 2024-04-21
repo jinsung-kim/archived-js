@@ -22,6 +22,8 @@ npm run build
 
 Select build as folder, don't overwrite index.html, and select yes to single page app.
 
+NOTE: If you have this configured properly, you only need to do the deploy command.
+
 ```shell
 firebase init && firebase deploy
 ```
