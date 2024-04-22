@@ -57,7 +57,11 @@ export function formatMd(post, width) {
         </div>
       );
     } else if (mode === 'link') {
-      return <a href={content}>{section['caption']}</a>;
+      return (
+        <a className="external-link" href={content} target="_blank">
+          {section['caption']}
+        </a>
+      );
     } else if (mode === 'divider') {
       return <div className="divider" key={`divider-${ind}`} />;
     }
