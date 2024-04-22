@@ -9,10 +9,9 @@ export default function PostPage() {
   const { id } = useParams();
   const [content, updateContent] = useState();
 
-  // Fetch from API
   useEffect(() => {
     fetch(
-      'https://us-central1-jinkim-backend.cloudfunctions.net/app/post?id=' + id,
+      `https://us-central1-jinkim-backend.cloudfunctions.net/app/post?id=${id}&postType=thoughts`,
     )
       .then(res => res.json())
       .then(function(postResults) {

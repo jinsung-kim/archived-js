@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import { useWindowDimensions } from '../helpers/ScreenSize';
+import { useWindowDimensions } from '../helpers/screen';
 import ImageList from '../images.txt';
 
 import '../styles/Capsules.css';

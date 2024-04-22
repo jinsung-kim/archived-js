@@ -6,6 +6,9 @@ import '../styles/Navbar.css';
 export default function Navbar() {
   return (
     <div className="navbar-container">
+      {/* <Link to="../" style={{ textDecoration: 'none' }}>
+        <p className="nav-item">WEEKLY</p>
+      </Link> */}
       <Link to="../" style={{ textDecoration: 'none' }}>
         <p className="nav-item">THOUGHTS</p>
       </Link>

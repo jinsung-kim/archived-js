@@ -1,6 +1,6 @@
 import React from 'react';
 import { formatMd } from '../helpers/formatter';
-import { useWindowDimensions } from '../helpers/ScreenSize';
+import { useWindowDimensions } from '../helpers/screen';
 
 import '../styles/Post.css';
 

@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="home-container">
       <Navbar />
-      <PostMenu postType="weekly" />
+      <PostMenu postType="thoughts" />
       <Footer />
     </div>
   );

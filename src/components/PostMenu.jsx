@@ -3,11 +3,13 @@ import PostThumbnail from './PostThumbnail';
 
 import '../styles/PostMenu.css';
 
-export default function PostMenu() {
+export default function PostMenu({ postType }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch('https://us-central1-jinkim-backend.cloudfunctions.net/app/posts')
+    fetch(
+      `https://us-central1-jinkim-backend.cloudfunctions.net/app/posts?postType=${postType}`,
+    )
       .then(res => res.json())
       .then(function(postsLoaded) {
         return postsLoaded;
@@ -25,7 +27,7 @@ export default function PostMenu() {
 
         setPosts(thumbnails);
       });
-  }, []);
+  }, [postType]);
 
   return (
     <div className="grid">
