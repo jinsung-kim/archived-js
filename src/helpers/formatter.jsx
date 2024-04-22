@@ -63,7 +63,7 @@ export function formatMd(post, width) {
         </a>
       );
     } else if (mode === 'divider') {
-      return <div className="divider" key={`divider-${ind}`} />;
+      return <div className="divider" key={`divider-${ind}`}></div>;
     }
   });
 }

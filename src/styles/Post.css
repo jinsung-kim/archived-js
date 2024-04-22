@@ -58,10 +58,10 @@
 
 .divider {
   width: 100%;
-  border-bottom: 1px;
-  color: antiquewhite;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  height: 0.5px;
+  background-color: antiquewhite;
+  margin-top: 10px;
+  margin-bottom: 14px;
 }
 
 .title-text {
