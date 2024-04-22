@@ -1,61 +1,65 @@
-import { useWindowDimensions } from '../helpers/ScreenSize';
 import React from 'react';
 
-export function formatMd(post) {
+export function formatMd(post, width) {
   if (!post) {
     return [];
   }
-  const { width } = useWindowDimensions();
 
-  return post.map(section => {
-    if (section['mode'] === 'text') {
+  return post.map((section, ind) => {
+    const mode = section['mode'];
+    const content = section['content'];
+    if (mode === 'text') {
       return (
-        <p className="text" key={section['content']}>
-          {section['content']}
+        <p className="text" key={`text-${ind}`}>
+          {content}
         </p>
       );
-    } else if (section['mode'] === 'quote') {
+    } else if (mode === 'quote') {
       return (
-        <p className="quote" key={section['content']}>
-          {section['content']}
+        <p className="quote" key={`quote-${ind}`}>
+          {content}
         </p>
       );
-    } else if (section['mode'] === 'bold') {
+    } else if (mode === 'bold') {
       return (
-        <p className="text-bolded" key={section['content']}>
-          {section['content']}
+        <p className="text-bolded" key={`text-bolded-${ind}`}>
+          {content}
         </p>
       );
-    } else if (section['mode'] === 'image') {
+    } else if (mode === 'image') {
       if (width > 500) {
         return (
-          <div className="image-link" key={section['content']}>
-            <img src={section['content']} width="400px" alt="---" />
+          <div className="image-link" key={`image-link-${ind}`}>
+            <img src={content} width="400px" alt="---" />
             <p className="caption">{section['caption']}</p>
           </div>
         );
       } else {
         return (
-          <div className="image-link" key={section['content']}>
-            <img src={section['content']} width="70%" alt="---" />
+          <div className="image-link" key={`image-link-${ind}`}>
+            <img src={content} width="70%" alt="---" />
             <p className="caption">{section['caption']}</p>
           </div>
         );
       }
-    } else if (section['mode'] === 'youtube') {
+    } else if (mode === 'youtube') {
       return (
-        <div className="youtube-link" key={section['content']}>
+        <div className="youtube-link" key={`youtube-${ind}`}>
           <iframe
             max-width="560px"
             width="80%"
             height="500"
-            src={section['content']}
+            src={content}
             title="YouTube video player"
             allowFullScreen
           ></iframe>
           <p className="caption">{section['caption']}</p>
         </div>
       );
+    } else if (mode === 'link') {
+      return <a href={content}>{section['caption']}</a>;
+    } else if (mode === 'divider') {
+      return <div className="divider" key={`divider-${ind}`} />;
     }
   });
 }
